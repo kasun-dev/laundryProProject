@@ -58,10 +58,10 @@
 						class="material-symbols-outlined">add_circle</span>Create New
 						Order
 				</a></li>
-				<li class="sidebar-list-item"><a href="javascript:void(0);"
-					onclick="loadContent('manageOrder.jsp')"> <span
+				<li class="sidebar-list-item"><form method = "post" action="order"><a href="javascript:void(0);"
+					onclick="loadContent('manageOrder.jsp')"><span
 						class="material-symbols-outlined">list_alt</span>Manage Order
-				</a></li>
+				</a></form> </li>
 				<li class="sidebar-list-item"><a href="javascript:void(0);"
 					onclick="loadContent('managePrices.jsp')"> <span
 						class="material-symbols-outlined">sell</span>Manage Prices
