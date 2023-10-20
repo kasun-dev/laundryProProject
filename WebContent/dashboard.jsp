@@ -82,8 +82,6 @@
 			</div>
 
 		</main>
-
-
 	</div>
 	<!--js-->
 	<script src="js/scripts.js"></script>
