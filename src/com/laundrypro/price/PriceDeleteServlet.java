@@ -19,7 +19,7 @@ public class PriceDeleteServlet extends HttpServlet {
 	 */
 	public PriceDeleteServlet() {
 		super();
-		// TODO Auto-generated constructor stub
+		
 	}
 
 	/**
