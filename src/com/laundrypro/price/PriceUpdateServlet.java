@@ -21,7 +21,7 @@ public class PriceUpdateServlet extends HttpServlet {
 	 */
 	public PriceUpdateServlet() {
 		super();
-		// TODO Auto-generated constructor stub
+		
 	}
 
 	/**
