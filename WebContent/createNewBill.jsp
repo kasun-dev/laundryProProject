@@ -96,14 +96,6 @@
 						<c:param name="subTotal" value="${subTotal}"></c:param>
 					</c:url>
 
-					<c:url value="/ItemDeleteServlet" var="deleteItem">
-						<c:param name="desc" value="${desc}"></c:param>
-						<c:param name="type" value="${type}"></c:param>
-						<c:param name="qty" value="${qty}"></c:param>
-						<c:param name="unitPrice" value="${unitPrice}"></c:param>
-						<c:param name="subTotal" value="${subTotal}"></c:param>
-					</c:url>
-
 					<!-- display data with edit and delete options -->
 					<tr>
 						<td>${items.description}</td>
@@ -134,10 +126,10 @@
 		<!-- Payment Amount -->
 		<div class="buttons">
 			<!-- Checkout button -->
-			<form method="post" action="">
+			<form method="post" action="checkout">
+			<input type="text" inputmode="numeric" name="paidAmount" />
+				<br />
 				<input type="button" id="checkout" value="checkout">
-
-
 
 			</form>
 			<!-- Discard items button -->

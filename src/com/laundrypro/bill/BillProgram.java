@@ -1,6 +1,8 @@
 package com.laundrypro.bill;
 
 import java.util.ArrayList;
+import java.util.UUID;  
+
 
 public class BillProgram {
 
@@ -69,6 +71,14 @@ public class BillProgram {
 		}
 
 		return minPayment;
+	}
+	
+	public static String GenerateUUID()
+	{
+		UUID uuid=UUID.randomUUID();  
+		String stringUUID = uuid.toString(); 
+		return stringUUID;
+
 	}
 
 	// public static void main(String[] args) {
