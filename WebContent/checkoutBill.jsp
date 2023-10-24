@@ -21,27 +21,7 @@
 
 			<form class="price-form" method="post" action="priceUpdate">
 
-				<!-- state -->
-				<input type="hidden" name="status" value="Confirmed">
-				<label>Description</label>
-				<input type="text" name="desc" value="<%=desc%>" readonly />
-				<br />
-				<label>Type</label>
-				<input type="text" name="type" value="<%=type%>" readonly />
-				<br />
-				<label>Qty</label>
-				<input type="number" value="<%=qty%>" readonly />
-				<br />
-				<label>Type</label>
-				<input type="text" inputmode="numeric" name="unitPrice" value="<%=unitPrice%>" readonly />
-				<br />
-				<input type="text" inputmode="numeric" name="subTotal" value="<%=subTotal%>" readonly />
-				<br />
-				<input type="text" inputmode="numeric" name="minPayment" value="<%=minPayment%>" readonly />
-				<br />
-				<input type="text" inputmode="numeric" name="paidAmount" value="<%=paidAmount%>" readonly />
-				<br />
-				<input type="submit" value="update" />
+				
 			</form>
 </body>
 </html>

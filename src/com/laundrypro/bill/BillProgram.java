@@ -1,8 +1,7 @@
 package com.laundrypro.bill;
 
 import java.util.ArrayList;
-import java.util.UUID;  
-
+import java.util.UUID;
 
 public class BillProgram {
 
@@ -26,6 +25,7 @@ public class BillProgram {
 		return itemList;
 	}
 
+	// item deletion from list method
 	public static void DeleteItemFromList(String desc, String type, int qty,
 			double unitPrice, double subTotal) {
 		try {
@@ -48,8 +48,9 @@ public class BillProgram {
 
 	}
 
+	// final amount calculation method
 	public static double CalculateFinalAmount() {
-		
+
 		double finalAmount = 0;
 
 		if (itemList.size() > 0) {
@@ -62,6 +63,7 @@ public class BillProgram {
 
 	}
 
+	// minimum amount calculation method
 	public static double CalculateMinPayment(double finalAmount) {
 
 		double minPayment = 0;
@@ -72,37 +74,64 @@ public class BillProgram {
 
 		return minPayment;
 	}
-	
-	public static String GenerateUUID()
-	{
-		UUID uuid=UUID.randomUUID();  
-		String stringUUID = uuid.toString(); 
+
+	// UUID generation method
+	public static String GenerateUUID() {
+		UUID uuid = UUID.randomUUID();
+		String stringUUID = uuid.toString();
 		return stringUUID;
 
 	}
+	
+	//empty the array
+	public static boolean emptyArray() {
+		
+		boolean isCleared = false;
+				
+		itemList.clear();
+		
+		int size = itemList.size();
+		
+		if(size == 0)
+		{
+			isCleared = true;
+		}
+		
+		return isCleared;
 
-	// public static void main(String[] args) {
-	//
-	// BillProgram.addItemToList("trouser", "bulk", 450.50, 2);
-	// BillProgram.addItemToList("trouser", "bulk", 450.50, 2);
-	// BillProgram.addItemToList("shirt", "regular", 25.0, 3);
-	//
-	// for (OrderItem x : itemList) {
-	// System.out.println(x.getDescription());
-	// System.out.println(x.getQuantity());
-	// System.out.println(x.getServiceType());
-	// System.out.println(x.getUnitPrice());
-	// System.out.println(x.getSubTotal());
-	// System.out.println();
-	// }
-	//
-	//
-	// BillProgram.CalculateFinalAmount();
-	// System.out.println(finalAmount);
-	// BillProgram.CalculateMinPayment();
-	// System.out.println(minPayment);
-	//
-	// ;
-	//
-	// }
+	}
+
+	//testing
+//	public static void main(String[] args) {
+//
+//		BillProgram.addItemToList("trouser", "bulk", 450.50, 2);
+//		BillProgram.addItemToList("trouser", "bulk", 450.50, 2);
+//		BillProgram.addItemToList("shirt", "regular", 25.0, 3);
+//
+//		for (OrderItem x : itemList) {
+//			System.out.println(x.getDescription());
+//			System.out.println(x.getQuantity());
+//			System.out.println(x.getServiceType());
+//			System.out.println(x.getUnitPrice());
+//			System.out.println(x.getSubTotal());
+//			System.out.println();
+//		}
+//
+//		//BillProgram.CalculateFinalAmount();
+//		//System.out.println(finalAmount);
+//		//BillProgram.CalculateMinPayment();
+//		//System.out.println(minPayment);
+//
+//	//System.out.println(BillProgram.GenerateUUID());
+//		
+//		if(BillProgram.emptyArray())
+//		{
+//			System.out.println("array is empty");
+//		}
+//		else
+//		{
+//			System.out.println("didnt work");
+//		}
+//
+//	}
 }
