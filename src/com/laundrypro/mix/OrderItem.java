@@ -1,15 +1,13 @@
-package com.laundrypro.bill;
+package com.laundrypro.mix;
 
 public class OrderItem {
-
 	private String description;
 	private String serviceType;
 	private double unitPrice;
 	private int quantity;
 	private double subTotal;
 
-	public OrderItem(String description, String serviceType, double unitPrice,
-			int quantity) {
+	public OrderItem(String description, String serviceType, double unitPrice, int quantity) {
 		super();
 		this.description = description;
 		this.serviceType = serviceType;
@@ -46,5 +44,6 @@ public class OrderItem {
 	public double getSubTotal() {
 		return subTotal;
 	}
+
 
 }

@@ -16,9 +16,7 @@ import javax.servlet.http.HttpServletResponse;
 public class ItemDeleteServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	/**
-	 * @see HttpServlet#HttpServlet()
-	 */
+	
 	public ItemDeleteServlet() {
 		super();
 
@@ -30,7 +28,7 @@ public class ItemDeleteServlet extends HttpServlet {
 		String desc = request.getParameter("desc");
 		String type = request.getParameter("type");
 		int qty = Integer.parseInt(request.getParameter("qty"));
-		double unitPrice = Double.parseDouble(request.getParameter("subTotal"));
+		double unitPrice = Double.parseDouble(request.getParameter("unitPrice"));
 		double subTotal = Double.parseDouble(request.getParameter("subTotal"));
 
 		BillProgram.DeleteItemFromList(desc, type, qty, unitPrice, subTotal);
