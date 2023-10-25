@@ -17,18 +17,32 @@ public class TrackOrderServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String refNo = request.getParameter("refno");
 		
-		try {
+		int count;
+		
+		count = LMSDBUtil.CheckRefNo(refNo);
+		
+		if(count == 1) {
+			try {
+				
+				
+				List<TrackOrder> trackOrder = LMSDBUtil.TrackOrder(refNo);
+				request.setAttribute("trackOrder", trackOrder);			
+			}
 			
-			List<TrackOrder> trackOrder = LMSDBUtil.TrackOrder(refNo);
-			request.setAttribute("trackOrder", trackOrder);			
+			catch (Exception e ) {
+				e.printStackTrace();
+			}
+
+			RequestDispatcher dis = request.getRequestDispatcher("OrderDetails.jsp");
+			dis.forward(request, response);
 		}
 		
-		catch (Exception e ) {
-			e.printStackTrace();
+		else {
+			request.setAttribute("errorMessage", "Invalid Reference Number!!!");
+			
+			RequestDispatcher dis = request.getRequestDispatcher("index.jsp");
+			dis.forward(request, response);
 		}
-
-		RequestDispatcher dis = request.getRequestDispatcher("OrderDetails.jsp");
-		dis.forward(request, response);
 	}
 
 }

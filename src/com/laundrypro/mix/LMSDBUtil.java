@@ -536,4 +536,27 @@ public class LMSDBUtil {
 
 		return isSucess;
 	}
+
+	public static int CheckRefNo(String refNo)
+	{
+		int count = 0;
+	
+	try
+	{
+	    con = DBconnect.getConnection();
+	    stmt = con.createStatement();
+	
+	    String sql = "SELECT COUNT(*) AS 'Count' FROM refgeneratetable WHERE refNo='"+refNo+"'";
+	    rs = stmt.executeQuery(sql);
+	    rs.next();
+	    count = rs.getInt("Count");
+	}
+	
+	catch (Exception e)
+	{
+	    e.printStackTrace();
+	}
+	
+	return count;
+	}
 }
