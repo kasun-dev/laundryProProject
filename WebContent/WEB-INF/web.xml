@@ -12,8 +12,8 @@
 		<servlet-name>priceInsertServlet</servlet-name>
 		<url-pattern>/insertPrice</url-pattern>
 	</servlet-mapping>
-	
-	
+
+
 	<servlet>
 		<servlet-name>PriceRetrieveServlet</servlet-name>
 		<servlet-class>com.laundrypro.price.PriceRetrieveServlet</servlet-class>
@@ -22,7 +22,7 @@
 		<servlet-name>PriceRetrieveServlet</servlet-name>
 		<url-pattern>/retrievePrice</url-pattern>
 	</servlet-mapping>
-	
+
 	<servlet>
 		<servlet-name>PriceUpdateServlet</servlet-name>
 		<servlet-class>com.laundrypro.price.PriceUpdateServlet</servlet-class>
@@ -31,7 +31,7 @@
 		<servlet-name>PriceUpdateServlet</servlet-name>
 		<url-pattern>/priceUpdate</url-pattern>
 	</servlet-mapping>
-	
+
 	<servlet>
 		<servlet-name>PriceDeleteServlet</servlet-name>
 		<servlet-class>com.laundrypro.price.PriceDeleteServlet</servlet-class>
@@ -40,6 +40,91 @@
 		<servlet-name>PriceDeleteServlet</servlet-name>
 		<url-pattern>/deletePrices</url-pattern>
 	</servlet-mapping>
+
+	<!-- takeshi -->
+
+	<servlet>
+		<servlet-name>Login</servlet-name>
+		<servlet-class>com.laundrypro.mix.LoginServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Login</servlet-name>
+		<url-pattern>/log</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>Customer</servlet-name>
+		<servlet-class>com.laundrypro.mix.CustomerServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Customer</servlet-name>
+		<url-pattern>/addcustomer</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>User</servlet-name>
+		<servlet-class>com.laundrypro.mix.UserRegisterServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>User</servlet-name>
+		<url-pattern>/adduser</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>Order</servlet-name>
+		<servlet-class>com.laundrypro.mix.ManageOrderServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Order</servlet-name>
+		<url-pattern>/Order</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>UpdateOrder</servlet-name>
+		<servlet-class>com.laundrypro.mix.UpdateOrderServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UpdateOrder</servlet-name>
+		<url-pattern>/update</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>DeleteOrder</servlet-name>
+		<servlet-class>com.laundrypro.mix.DeleteOrderServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>DeleteOrder</servlet-name>
+		<url-pattern>/delete</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>TrackOrder</servlet-name>
+		<servlet-class>com.laundrypro.mix.TrackOrderServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>TrackOrder</servlet-name>
+		<url-pattern>/Track</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>final</servlet-name>
+		<servlet-class>com.laundrypro.mix.FinalBillServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>final</servlet-name>
+		<url-pattern>/billfinalize</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>close</servlet-name>
+		<servlet-class>com.laundrypro.mix.CloseBillServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>close</servlet-name>
+		<url-pattern>/billclose</url-pattern>
+	</servlet-mapping>
+
+
 
 
 </web-app>

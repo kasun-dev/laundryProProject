@@ -21,8 +21,8 @@
 		<!--empty-->
 	</div>
 	<div class="header-left">
-		<a class="navlinks" href="javascript:void(0);" onclick="loadContent('cus.index.jsp')">
-			<span class="material-symbols-outlined">home</span>Home
+		<a class="navlinks" href="dashboard.jsp">
+			<span class="material-symbols-outlined">dashboard</span>Dashboard
 		</a>
 		<a class="navlinks" href="javascript:void(0);" onclick="loadContent('userDetails.jsp')">
 			<span class="material-symbols-outlined">badge</span>My account

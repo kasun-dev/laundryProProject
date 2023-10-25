@@ -14,13 +14,13 @@
 		<main class="main">
 			<div id="main-content">
 				<div class=b1>
-					<a href="createNewBill.jsp">
+					<a href="ItemListDisplayServlet">
 						<button>Create New Bill</button>
 					</a>
 				</div>
 			</div>
 			<div class=b1>
-				<a href="#">
+				<a href="SearchBill.jsp">
 					<button>Close Existing Bill</button>
 				</a>
 			</div>

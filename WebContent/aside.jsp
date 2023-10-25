@@ -23,17 +23,17 @@
 		<ul class="sidebar-list">
 
 			<li class="sidebar-list-item">
-				<a href="javascript:void(0);" onclick="loadContent('createNewBill.jsp')">
-					<span class="material-symbols-outlined">add_circle</span>Create New Order
+				<a href="billingPage.jsp">
+					<span class="material-symbols-outlined">add_circle</span>Billing Options
 				</a>
 			</li>
 			<li class="sidebar-list-item">
-				<a href="javascript:void(0);" onclick="loadContent('manageOrder.jsp')">
+				<a href="Order">
 					<span class="material-symbols-outlined">list_alt</span>Manage Order
 				</a>
 			</li>
 			<li class="sidebar-list-item">
-				<a href="javascript:void(0);" onclick="loadContent('retrievePrice')">
+				<a href="retrievePrice">
 					<span class="material-symbols-outlined">sell</span>Manage Prices
 				</a>
 			</li>

@@ -8,14 +8,14 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
-<link rel="stylesheet" href="css/style_main.css" />
+<link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-	<main>
-		<div id="main-content">
-			<div class="heading">
-				Create New Bill <br />
-			</div>
+	<div class="container">
+		<jsp:include page="header.jsp" />
+		<jsp:include page="aside.jsp" />
+		<!--main content-->
+		<main class="main-container">
 			<!-- Add item form -->
 			<div class="form-container">
 				<form name="itemInputForm" class="item-form" method="POST" action="AddItemServlet">
@@ -142,7 +142,7 @@
 					<input type="text" inputmode="numeric" name="paidAmount" placeholder="Enter payment amount" required />
 					<input type="hidden" inputmode="numeric" name="finalAmount" value="${finalPrice}" />
 					<input type="hidden" inputmode="numeric" name="minAmount" value="${minPayment}" />
-					<input type="hidden" name="state" value="Confirmed"/>
+					<input type="hidden" name="state" value="Confirmed" />
 					<br />
 
 					<input type="submit" id="checkout" value=Checkout>
@@ -154,8 +154,9 @@
 					<input type="submit" id="discard" value="discard">
 				</form>
 			</div>
-		</div>
-	</main>
+
+		</main>
+	</div>
 	<!-- front end validation -->
 	<script>
         var date = new Date();
