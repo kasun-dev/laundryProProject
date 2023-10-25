@@ -1,5 +1,6 @@
 package com.laundrypro.mix;
 
+import com.laundrypro.common.DBconnect;
 import java.sql.Connection;
 import java.sql.ResultSet;//new
 import java.sql.Statement;
