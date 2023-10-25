@@ -1,0 +1,211 @@
+@charset "ISO-8859-1";
+
+/* AccManagepg.jsp css content */
+        .uaccbody {
+            font-family: Arial, sans-serif;
+        }
+
+        .accmanagerstyle {
+            max-width: 80%;
+            margin: 0 auto;
+        }
+
+        .accmanagerstyle h1 {
+            color: #333;
+        }
+
+        .usertable table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .usertable th, td {
+            border: 0px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        .usertable th {
+            background-color: #f2f2f2;
+        }
+
+        .button {
+            margin-top: 20px;
+        }
+
+        /* Create Account Button */
+        .accmanagerstyle input[name="CreateAccount"] {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #4CAF50; /* Green */
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+        }
+
+        .accmanagerstyle input[name="CreateAccount"]:hover {
+            background-color: #45a049;
+        }
+
+        /* Update Button */
+        .accmanagerstyle input[name="Update"] {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #3498db; /* Blue */
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+        }
+
+        .accmanagerstyle input[name="Update"]:hover {
+            background-color: #2980b9;
+        }
+
+        /* Delete Button */
+        .accmanagerstyle input[name="Delete"] {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #e74c3c; /* Red */
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+        }
+
+        .accmanagerstyle input[name="Delete"]:hover {
+            background-color: #c0392b;
+        }
+        
+ /*createacc.jsp css*/      
+        .caccbody {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .createacc form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+        .createacc label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        .createacc input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .createacc input[type="submit"] {
+            background-color: #4caf50;
+            color: #fff;
+            cursor: pointer;
+        }
+        .createacc input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        .createacc #error-message {
+            color: red;
+        }
+        
+/*deleteAcc.jsp css and loginpg.jsp css*/  
+
+         body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .page form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+
+        .page label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .page input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+
+        .page input[type="submit"] {
+            background-color: #6499E9;
+            color: white;
+            cursor: pointer;
+        }
+
+       .page input[type="submit"]:hover {
+            background-color: #9EDDFF;
+        }
+
+        .error-message {
+            color: #ff0000;
+            margin-top: 10px;
+        }
+        
+/*css for user profile*/
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .profile-container {
+            width: 500px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .profile-info {
+            text-align: left;
+            padding-left: 30%;
+        }
+
+        .profile-info h1 {
+            margin: 0;
+            color: #333;
+            
+            
+        }
+
+        .profile-info p {
+            margin: 20px 0;
+            color: #666;            
+        }
+
+        .profile-info .label {
+            font-weight: bold;
+        }
+      
+    
+   

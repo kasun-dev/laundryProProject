@@ -24,8 +24,8 @@
 		<a class="navlinks" href="dashboard.jsp">
 			<span class="material-symbols-outlined">dashboard</span>Dashboard
 		</a>
-		<a class="navlinks" href="javascript:void(0);" onclick="loadContent('userDetails.jsp')">
-			<span class="material-symbols-outlined">badge</span>My account
+		<a class="navlinks" href="loginpg.jsp">
+			<span class="material-symbols-outlined">logout</span>Logout
 		</a>
 	</div>
 </header>

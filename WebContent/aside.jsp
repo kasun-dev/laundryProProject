@@ -38,7 +38,7 @@
 				</a>
 			</li>
 			<li class="sidebar-list-item">
-				<a href="javascript:void(0);" onclick="loadContent('manageUserAccounts.jsp')">
+				<a href="AccmanagerCtrl">
 					<span class="material-symbols-outlined">manage_accounts</span>Manage User Accounts
 				</a>
 			</li>
