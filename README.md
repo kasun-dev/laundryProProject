@@ -14,8 +14,8 @@ A laundry management system called LaundryPro.
 
 #### Management side
 - [ ] Login
-- [ ] Creating New Orders
-- [ ] Manage Order
+- [x] Creating New Orders
+- [x] Manage Order
 - [x] Manage Prices
 - [ ] Manage User Accounts
 - [ ] View User self details
