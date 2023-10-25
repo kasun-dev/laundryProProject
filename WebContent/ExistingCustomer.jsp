@@ -15,6 +15,8 @@
 
 	<%
 	String errorMessage = (String) request.getAttribute("errorMessage");
+	String refno = (String) request.getAttribute("refno");
+
 	if (errorMessage != null) {
 	%>
 	<script type="text/javascript">
@@ -72,10 +74,24 @@
 				</table>
 				<div class="button-container">
 					<div class="yes-button">
-						<button class="button-element">Yes</button>
+						<form action="InsertExtCustToBill" method="post">
+							<input type="hidden" value="continue" name="action" />
+							<input type="hidden" name="refno" value="${refno}" />
+							<c:forEach var="cus" items="${customer}">
+								<input type="hidden" name="contactno" value="${cus.contactNo}" />
+							</c:forEach>
+							<button class="button-element">Yes</button>
+						</form>
+
+
 					</div>
+
 					<div class="no-button">
-						<button class="button-element">No</button>
+						<form action="InsertExtCustToBill" method="post">
+							<input type="hidden" value="back" name="action" />
+							<input type="hidden" name="refno" value="${refno}" />
+							<button class="button-element">No</button>
+						</form>
 					</div>
 				</div>
 			</div>

@@ -168,7 +168,7 @@
 				<div class="buttonraw">
 
 					<div class="update-button">
-						<button class="button-element">Search Another Order</button>
+						<button class="button-element">Close Bill</button>
 					</div>
 				</div>
 			</form>

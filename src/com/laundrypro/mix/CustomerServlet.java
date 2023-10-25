@@ -10,36 +10,50 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-
 @WebServlet("/Customer")
 public class CustomerServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request,
+			HttpServletResponse response) throws ServletException, IOException {
 		String name = request.getParameter("name");
 		String contactNo = request.getParameter("contact_number");
 		String address = request.getParameter("address");
+		String refno = request.getParameter("refno");
+
+		boolean isTrue = false;
+
+		isTrue = LMSDBUtil.insertCutomerDetails(refno, name, contactNo,
+				address);
 		
-		boolean isTrue;
-		
-		isTrue = LMSDBUtil.cutomerDetails(name, contactNo, address);
-		
-		if(isTrue == true)
-		{
-			RequestDispatcher dis = request.getRequestDispatcher("sucess.jsp");
-			dis.forward(request, response);			
-		}
-		else
-		{
-			request.setAttribute("errorMessage", "This customer already exsist!!!");
+		request.setAttribute("refno", refno);
+
+		if (isTrue == true) {
+
+			List<TrackOrder> orderDetails = LMSDBUtil.TrackOrder(refno);
+			request.setAttribute("orderDetails", orderDetails);
 			
+			List<OrderItem> orderItem = LMSDBUtil.OrderItem(refno);
+			request.setAttribute("orderItem", orderItem);
+			
+			List<Customer> cusDetails = LMSDBUtil.CustomerDetails(refno);
+			request.setAttribute("cusDetails", cusDetails);
+			
+			RequestDispatcher dis = request.getRequestDispatcher("createNewBill.fullbill.jsp");
+			dis.forward(request, response);
+
+			//response.sendRedirect(request.getContextPath() + "/DisplayNewFullBillServlet");
+
+		} else {
+			request.setAttribute("errorMessage",
+					"This customer already exsist!!!");
+
 			List<Customer> customer = LMSDBUtil.ValidateCustomer(contactNo);
 			request.setAttribute("customer", customer);
-			
-			
-			RequestDispatcher dis2 = request.getRequestDispatcher("ExistingCustomer.jsp");
-			dis2.forward(request, response);
+
+			RequestDispatcher dis = request
+					.getRequestDispatcher("ExistingCustomer.jsp");
+			dis.forward(request, response);
 		}
 	}
 }

@@ -42,7 +42,13 @@
 		<!--main content-->
 		<main class="main-container">
 			<div class="form-container">
+			
+			
+				
 				<form action="addcustomer" method="post" onsubmit="return validatePhoneNumber();">
+				<!-- passed reference number of the related bill -->
+				<label>Bill Reference No:</label>
+					<input type="text" name="refno" value="${refno}" readonly/>
 					<table>
 						<tr>
 							<td>

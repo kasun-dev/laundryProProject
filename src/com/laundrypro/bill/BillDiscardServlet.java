@@ -22,10 +22,7 @@ public class BillDiscardServlet extends HttpServlet {
 
 		// clear the array
 		boolean clearArray = BillProgram.emptyArray();
-		HttpSession session = request.getSession();
-
-		// remove refno from session
-		session.removeAttribute("refno");
+		
 
 		if (clearArray == true) {
 			response.sendRedirect("billingPage.jsp");

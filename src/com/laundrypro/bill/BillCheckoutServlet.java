@@ -3,6 +3,7 @@ package com.laundrypro.bill;
 import java.io.IOException;
 import java.util.ArrayList;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -26,8 +27,6 @@ public class BillCheckoutServlet extends HttpServlet {
 		double finalAmount = Double.parseDouble(request.getParameter("finalAmount"));
 		String state = request.getParameter("state");
 		
-		
-		
 		//generate and get UUID for new bill
 		String UUID = BillProgram.GenerateUUID();
 		
@@ -44,6 +43,7 @@ public class BillCheckoutServlet extends HttpServlet {
 				 */
 				
 				String refNo = BillDbUtil.getRefNoFromDB(UUID);
+				request.setAttribute("refno", refNo);
 					
 				ArrayList<OrderItem> itemList = BillProgram.getItemList(); //get Item List
 				
@@ -59,11 +59,23 @@ public class BillCheckoutServlet extends HttpServlet {
 					
 					if(dotask == true)
 					{
-						HttpSession session = request.getSession();
-						session.setAttribute("refno", refNo);
+						dotask = BillProgram.emptyArray();
+						
+						RequestDispatcher dispatcher = request.getRequestDispatcher("createNewBill.cusDetails.jsp"); 
+						dispatcher.forward(request, response);
+						
 					}
 				}
 				
+				
+			}
+			else {
+				
+				dotask = BillProgram.emptyArray();
+				String error = "Something went horribly wrong, Contact an admin";
+				request.setAttribute("error", error);
+				RequestDispatcher dispatcher = request.getRequestDispatcher("billingPage.jsp"); 
+				dispatcher.forward(request, response);
 				
 			}
 		}
