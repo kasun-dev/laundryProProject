@@ -53,7 +53,7 @@ public class BillDbUtil {
 			ResultSet rs = stmt.executeQuery(sql);
 
 			while (rs.next()) {
-				refno = rs.getString("itemName");
+				refno = rs.getString("refNo");
 			}
 
 		} catch (Exception e) {

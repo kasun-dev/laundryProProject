@@ -8,25 +8,15 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  * Servlet implementation class CheckoutServlet
  */
-@WebServlet("/CheckoutServlet")
-public class CheckoutServlet extends HttpServlet {
+@WebServlet("/BillCheckoutServlet")
+public class BillCheckoutServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public CheckoutServlet() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
 
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
@@ -42,25 +32,38 @@ public class CheckoutServlet extends HttpServlet {
 		String UUID = BillProgram.GenerateUUID();
 		
 		//save UUID in DB to generate Reference Number
-		boolean doInsert = false;
+		boolean dotask = false;
 		
 		try {
-			doInsert = BillDbUtil.insertUUID(UUID);
+			dotask = BillDbUtil.insertUUID(UUID);
 			
-			if(doInsert == true)
+			if(dotask == true)
 			{
 				/*get referenceNo from Database
 				 * (reference number generated from DB using trigger)
 				 */
 				
 				String refNo = BillDbUtil.getRefNoFromDB(UUID);
-				
-				if(refNo.length() > 1)
-				{
 					
-					ArrayList<OrderItem> itemList = BillProgram.getItemList(); //get Item List
+				ArrayList<OrderItem> itemList = BillProgram.getItemList(); //get Item List
+				
+				//insert bill into database
+				dotask = BillDbUtil.insertBillData(refNo, finalAmount, paidAmount, currentDate, dueDate, state);
+				
+				
+				if(dotask == true)
+				{
 					//insert bill items into database
+					dotask = BillDbUtil.insertBillItem(refNo, itemList);
+					
+					
+					if(dotask == true)
+					{
+						HttpSession session = request.getSession();
+						session.setAttribute("refno", refNo);
+					}
 				}
+				
 				
 			}
 		}

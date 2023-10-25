@@ -3,7 +3,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Billing</title>
+<title>LaundryPro Home</title>
 <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -13,18 +13,17 @@
 		<!--main content-->
 		<main class="main">
 			<div id="main-content">
-				<div class=b1>
-					<a href="createNewBill.jsp">
-						<button>Create New Bill</button>
-					</a>
-				</div>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
 			</div>
-			<div class=b1>
-				<a href="#">
-					<button>Close Existing Bill</button>
-				</a>
-			</div>
-
 		</main>
 	</div>
 </body>

@@ -1,7 +1,7 @@
 package com.laundrypro.bill;
 
 public class OrderItem {
-	
+
 	private String description;
 	private String serviceType;
 	private double unitPrice;
@@ -46,6 +46,5 @@ public class OrderItem {
 	public double getSubTotal() {
 		return subTotal;
 	}
-
 
 }

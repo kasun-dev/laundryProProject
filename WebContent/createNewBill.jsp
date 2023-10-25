@@ -129,7 +129,7 @@
 			<!-- Payment Amount -->
 			<div class="buttons">
 				<!-- Checkout button -->
-				<form name="checkoutForm" method="post" onsubmit="return validateCheckoutForm()" action="CheckoutServlet">
+				<form name="checkoutForm" method="post" onsubmit="return validateCheckoutForm()" action="BillCheckoutServlet">
 					<label>Order Due Date</label>
 					<input type="date" name="dueDate" required />
 					<br />
@@ -150,8 +150,8 @@
 				</form>
 
 				<!-- Discard items button -->
-				<form method="post" action="">
-					<input type="button" id="discard" value="discard">
+				<form method="post" action="BillDiscardServlet">
+					<input type="submit" id="discard" value="discard">
 				</form>
 			</div>
 		</div>
