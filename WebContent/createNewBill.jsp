@@ -15,57 +15,63 @@
 		<jsp:include page="header.jsp" />
 		<jsp:include page="aside.jsp" />
 		<!--main content-->
-		<main class="main-container">
+		<main class="main">
+			<h2>Enter Bill Items</h2>
 			<!-- Add item form -->
 			<div class="form-container">
+
 				<form name="itemInputForm" class="item-form" method="POST" action="AddItemServlet">
-					<label>Item Description</label>
-					<input type="text" name="desc" placeholder="Enter Item description" required />
-					<br />
-					<label>Service Type</label>
-					<select id="service" name="type" required>
-						<option value="dry_clean">Dry Clean</option>
-						<option value="bulk">Bulk laundry</option>
-					</select>
-					<label>Quantity</label>
-					<input type="number" name="quantity" min="1" required />
-					<label>Unit Price</label>
-					<select id="prices" name="unitPrice" required>
-						<optgroup label="Bulk Prices"></optgroup>
-						<%
-						ArrayList<BulkPrice> price1 = PriceUtil.getBulkPriceList();
-						ArrayList<DryCleanPrice> price2 = PriceUtil.getDryCleanPriceList();
+					<div class="inner-form">
+						<label>Item Description</label>
+						<input type="text" name="desc" placeholder="Enter Item description" required />
+						<br />
+						<label>Service Type</label>
+						<select id="service" name="type" required>
+							<option value="dry_clean">Dry Clean</option>
+							<option value="bulk">Bulk laundry</option>
+						</select>
+						<label>Quantity</label>
+						<input type="number" name="quantity" min="1" required />
+						<label>Unit Price</label>
+						<select id="prices" name="unitPrice" required>
+							<optgroup label="Bulk Prices"></optgroup>
+							<%
+							ArrayList<BulkPrice> price1 = PriceUtil.getBulkPriceList();
+							ArrayList<DryCleanPrice> price2 = PriceUtil.getDryCleanPriceList();
 
-						for (BulkPrice entry : price1) {
-						%>
-						<option value="<%=entry.getPrice()%>">
-							<%=entry.getWeight()%> kg =
-							<%=entry.getPrice()%></option>
+							for (BulkPrice entry : price1) {
+							%>
+							<option value="<%=entry.getPrice()%>">
+								<%=entry.getWeight()%> kg =
+								<%=entry.getPrice()%></option>
 
-						<%
-						}
-						%>
-						<optgroup label="Dry Cleaning Prices"></optgroup>
-						<%
-						for (DryCleanPrice entry : price2) {
-						%>
-						<option value="<%=entry.getPrice()%>">
-							<%=entry.getItemname()%> =
-							<%=entry.getPrice()%></option>
+							<%
+							}
+							%>
+							<optgroup label="Dry Cleaning Prices"></optgroup>
+							<%
+							for (DryCleanPrice entry : price2) {
+							%>
+							<option value="<%=entry.getPrice()%>">
+								<%=entry.getItemname()%> =
+								<%=entry.getPrice()%></option>
 
-						<%
-						}
-						%>
-					</select> <br />
+							<%
+							}
+							%>
+						</select> <br />
+					</div>
+					<br>
 
-					<input type="submit" value="Add Item" />
+					<input type="submit" value="Add Item" class="edit-button button-font-medium" />
+
 				</form>
 			</div>
 
 			<!-- Show added items table -->
-			<div class="item-table">
+			<div class="table-responsive">
 				<!--show, edit and delete price - BULK -->
-				<table border="1" cellpadding="5px">
+				<table border="1">
 					<caption>Bill items</caption>
 
 					<tr>
@@ -106,7 +112,7 @@
 							<td>${items.subTotal}</td>
 
 							<td><form method="post" action="${deleteItem}">
-									<input type="submit" value="delete" />
+									<input class="delete-button" type="submit" value="delete" />
 
 								</form></td>
 						</tr>
@@ -114,7 +120,7 @@
 				</table>
 			</div>
 
-
+			<br />
 			<div class="payment-container">
 				<div id="a1">Final Amount: ${finalPrice}</div>
 				<br>
@@ -130,28 +136,32 @@
 			<div class="buttons">
 				<!-- Checkout button -->
 				<form name="checkoutForm" method="post" onsubmit="return validateCheckoutForm()" action="BillCheckoutServlet">
-					<label>Order Due Date</label>
-					<input type="date" name="dueDate" required />
-					<br />
-					<!--  <input type="date" id="currentDate" name="currentDate" value="" />-->
-					<label>Current Date</label>
+					<div class="inner-form">
+						<label>Order Due Date</label>
+						<input type="date" name="dueDate" required />
+						<br />
+						<!--  <input type="date" id="currentDate" name="currentDate" value="" />-->
+						<label>Current Date</label>
 
-					<input type="date" id="currentDate" name="currentDate" readonly>
+						<input type="date" id="currentDate" name="currentDate" readonly>
+						<br />
+						<label>Customer Payment Amount</label>
+						<input type="text" inputmode="numeric" name="paidAmount" placeholder="Enter payment amount" required />
+						<input type="hidden" inputmode="numeric" name="finalAmount" value="${finalPrice}" />
+						<input type="hidden" inputmode="numeric" name="minAmount" value="${minPayment}" />
+						<input type="hidden" name="state" value="Confirmed" />
+						<br />
+					</div>
 					<br />
-					<label>Customer Payment Amount</label>
-					<input type="text" inputmode="numeric" name="paidAmount" placeholder="Enter payment amount" required />
-					<input type="hidden" inputmode="numeric" name="finalAmount" value="${finalPrice}" />
-					<input type="hidden" inputmode="numeric" name="minAmount" value="${minPayment}" />
-					<input type="hidden" name="state" value="Confirmed" />
-					<br />
-
-					<input type="submit" id="checkout" value=Checkout>
-
+					<div class="right-align">
+						<input type="submit" id="checkout" value=Checkout class="edit-button button-font-medium">
+					</div>
 				</form>
 
 				<!-- Discard items button -->
+
 				<form method="post" action="BillDiscardServlet">
-					<input type="submit" id="discard" value="discard">
+					<input type="submit" id="discard" value="discard" class="delete-button button-font-medium">
 				</form>
 			</div>
 

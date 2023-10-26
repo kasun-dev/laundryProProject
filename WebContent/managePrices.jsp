@@ -50,7 +50,7 @@
 
 				<!--show, edit and delete price - BULK -->
 				<div class="bulk-table">
-					<table border="1" cellpadding="5px">
+					<table>
 						<caption>Bulk Prices</caption>
 
 						<tr>
@@ -80,10 +80,10 @@
 								<td>${bprice.weight}</td>
 								<td>${bprice.price}</td>
 								<td><a href="${bulkupdate}">
-										<input type="button" name="edit" value="edit" />
+										<input type="button" name="edit" value="edit" class="edit-button"/>
 									</a></td>
 								<td><form method="post" action="deletePrices">
-										<input type="submit" value="delete" />
+										<input type="submit" value="delete" class="delete-button"/>
 										<input type="hidden" name="bid" value="${bid}" />
 										<input type="hidden" name="type" value="bulk" />
 									</form></td>
@@ -96,7 +96,7 @@
 
 				<!--show, edit and delete price - DRY CLEAN-->
 				<div class="dry-clean-table">
-					<table border="1" cellpadding="5px">
+					<table>
 						<caption>Dry Clean Prices</caption>
 						<tr>
 							<th>Item name</th>
@@ -124,10 +124,10 @@
 								<td>${dcprice.price}</td>
 
 								<td><a href="${dcupdate}">
-										<input type="button" name="edit" value="edit" />
+										<input type="button" name="edit" value="edit" class="edit-button"/>
 									</a></td>
 								<td><form method="post" action="deletePrices">
-										<input type="submit" value="delete" />
+										<input type="submit" value="delete" class="delete-button"/>
 										<input type="hidden" name="dcid" value="${dcid}" />
 										<input type="hidden" name="type" value="dry_clean" />
 									</form></td>

@@ -11,7 +11,7 @@
 		<jsp:include page="header.jsp" />
 		<jsp:include page="aside.jsp" />
 		<!--main content-->
-		<main class="main-container">
+		<main class="main">
 
 			<div id="main-content">
 
