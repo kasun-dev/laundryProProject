@@ -16,7 +16,7 @@
 		<jsp:include page="aside.jsp" />
 		<!--main content-->
 		<main class="main">
-			<div id="main-content">
+			<div class="main-content">
 				<!-- add new price -->
 				<div class="add-price">
 					<div class="price-header">Add New Price</div>
