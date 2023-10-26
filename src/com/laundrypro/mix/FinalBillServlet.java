@@ -17,24 +17,38 @@ public class FinalBillServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		//doGet(request, response);
 		String refNo = request.getParameter("refno");
-
-		try {
-			List<TrackOrder> orderDetails = LMSDBUtil.TrackOrder(refNo);
-			request.setAttribute("orderDetails", orderDetails);
-			
-			List<OrderItem> orderItem = LMSDBUtil.OrderItem(refNo);
-			request.setAttribute("orderItem", orderItem);
-			
-			List<Customer> cusDetails = LMSDBUtil.CustomerDetails(refNo);
-			request.setAttribute("cusDetails", cusDetails);
-		}
 		
-		catch (Exception e ) {
-			e.printStackTrace();
+		int count;
+		
+		count = LMSDBUtil.CheckRefNo(refNo);
+
+		if(count == 1)
+		{
+			try {
+				List<TrackOrder> orderDetails = LMSDBUtil.TrackOrder(refNo);
+				request.setAttribute("orderDetails", orderDetails);
+				
+				List<OrderItem> orderItem = LMSDBUtil.OrderItem(refNo);
+				request.setAttribute("orderItem", orderItem);
+				
+				List<Customer> cusDetails = LMSDBUtil.CustomerDetails(refNo);
+				request.setAttribute("cusDetails", cusDetails);
+			}
+			
+			catch (Exception e ) {
+				e.printStackTrace();
+			}
+			
+			RequestDispatcher dis = request.getRequestDispatcher("CloseBill.jsp");
+			dis.forward(request, response);
 		}
 
-		RequestDispatcher dis = request.getRequestDispatcher("CloseBill.jsp");
-		dis.forward(request, response);
+		else {
+			request.setAttribute("errorMessage", "Invalid Reference Number!!!");
+			
+			RequestDispatcher dis = request.getRequestDispatcher("SearchBill.jsp");
+			dis.forward(request, response);
+		}
 
 	}
 
