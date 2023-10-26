@@ -43,8 +43,8 @@
 					<table>
 						<tr>
 							<td>
-								<h1>LAUNDRY PRO</h1> <br>
-								<h3>Update Profile</h3>
+
+								<h2>Update Profile</h2>
 							</td>
 						</tr>
 						<tr>
@@ -52,29 +52,31 @@
 								<form action="updateAccCtrl" method="post">
 									<label for="name">Name:</label>
 									<input type="text" id="name" name="name" value="<%=name%>" required>
-
+									</br>
 									<label for="nic">National Identity Card (NIC):</label>
 									<input type="text" id="nic" name="nic" value="<%=nic%>"
 										pattern="[0-9]{9}[v]|[0-9]{9}[V]|[0-9]{9}[Z]|[0-9]{9}[z]|[0-9]{12}"
 										title="Please enter a valid NIC number eg:199912345678 or 991234567V" required>
-
+									</br>
 									<label for="address">phone No.:</label>
 									<input type="text" id="phoneNo" name="phoneNo" value="<%=phoneNo%>" pattern="(\+94\d{9}|0\d{9,10})"
 										title="Please enter a valid phone number. eg:0123456789 or +94123456789" required>
-
+									</br>
 									<label for="username">Username:</label>
 									<input type="text" id="username" name="username" value="<%=uname%>" readonly>
-
+									</br>
 									<label for="password">Password:</label>
 									<input type="password" id="password" name="password" value="<%=pwd%>" required>
-
+									</br>
 									<label for="confirmPassword">Confirm Password:</label>
 									<input type="password" id="confirmPassword" name="confirmPassword" required>
 									<div id="error-message"></div>
-
+									</br>
 									<input type="submit" value="Update Account">
 								</form>
+
 							</td>
+
 						</tr>
 					</table>
 

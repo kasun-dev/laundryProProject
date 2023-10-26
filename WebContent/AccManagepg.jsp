@@ -19,14 +19,12 @@
 				<div class="accmanagerstyle">
 					<!--create account -->
 
-					<br> <br>
-					<h1>User Details</h1>
-					<div class="button">
-						<a href="createacc.jsp">
-							<input type="button" name="CreateAccount" value="Create New Account">
-						</a>
-					</div>
+					<br>
 
+					<div class="new-account-container">
+						<a href="createacc.jsp" class="new-account-link"> Click Here To Create a New Account ! </a>
+					</div>
+					<h1>User Details</h1>
 
 					<table class="usertable">
 						<thead>
@@ -37,7 +35,7 @@
 								<th>Password</th>
 								<th>Phone Number</th>
 								<th>Type</th>
-								<th>Update Account</th>
+								<th>Edit Account</th>
 								<th>Delete Account</th>
 							</tr>
 						</thead>
@@ -77,10 +75,10 @@
 									<td>${usr.phoneNo}</td>
 									<td>${usr.type}</td>
 									<td><a href="${userupdate}">
-											<input type="button" name="Update" value="Update">
+											<input class="edit-button" type="button" name="Update" value="Edit">
 										</a></td>
 									<td><a href="${userdelete}">
-											<input type="button" name="Delete" value="Delete">
+											<input class="delete-button" type="button" name="Delete" value="Delete">
 										</a></td>
 								</tr>
 
