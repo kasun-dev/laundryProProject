@@ -30,6 +30,18 @@
 	}
 </script>
 
+	<%
+        String errorMessage = (String) request.getAttribute("errorMessage");
+        if (errorMessage != null) {
+    %>
+    
+    <script type="text/javascript">
+        alert("<%= errorMessage %>");
+    </script>
+    <%
+        }
+    %>
+
 </head>
 <body>
 		<!--Header-->
@@ -42,7 +54,7 @@
 					<span class="material-symbols-outlined">login</span>Login
 				</a>
 				<a class="navlinks" href="loginpg.jsp">
-					<span class="material-symbols-outlined">home</span>Login
+					<span class="material-symbols-outlined">home</span>Home
 				</a>
 				
 			</div>

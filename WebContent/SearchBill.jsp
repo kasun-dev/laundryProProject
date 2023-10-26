@@ -24,6 +24,18 @@
     }
 </script>
 
+	<%
+        String errorMessage = (String) request.getAttribute("errorMessage");
+        if (errorMessage != null) {
+    %>
+    
+    <script type="text/javascript">
+        alert("<%= errorMessage %>");
+    </script>
+    <%
+        }
+    %>
+
 </head>
 <body>
 	<div class="container">
