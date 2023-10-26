@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>LaundryPro</title>
 <!--css-->
-<link rel="stylesheet" href="css/i-styles.css">
+<link rel="stylesheet" href="css/styles.css">
 <!--google icons-->
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 <!--roboto font-->
@@ -32,8 +32,6 @@
 
 </head>
 <body>
-	<div class="home-containter">
-
 		<!--Header-->
 		<header class="header">
 			<div class="header-right">
@@ -50,8 +48,8 @@
 			</div>
 		</header>
 
-		<main>
-			<div class="form-container">
+		<main class="main">
+			<div class="track-order-container">
 				<form action="Track" method="post" onsubmit="return validateRefNo();">
 					<table>
 						<tr>
@@ -65,14 +63,11 @@
 							</td>
 						</tr>
 					</table>
-					<div class="search-button">
-						<button class="button-element">Search Order</button>
+					<div class="track-order-button">
+						<button class="track-button">Search Order</button>
 					</div>
 				</form>
 			</div>
 		</main>
-
-	</div>
-
 </body>
 </html>

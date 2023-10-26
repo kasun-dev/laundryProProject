@@ -9,7 +9,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Document</title>
 <link rel="stylesheet" href="css/styles.css">
-<link rel="stylesheet" href="css/OrderDetails.css">
 <!--google icons-->
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 <!--roboto font-->
@@ -36,13 +35,13 @@
 	</header>
 
 
-	<main class="main-container">
+	<main class="main">
 		<c:forEach var="to" items="${trackOrder}">
-			<div class="card-container">
-				<div class="cardraw-1">
+			<div class="order-details-card-container">
+				<div class="OrderDetailsCardRaw-1">
 
-					<div class="card">
-						<div class="card-inner">
+					<div class="OrderDetailsCard">
+						<div class="OrderDetailsCard-inner">
 							<p class="card-name">Customer Name :</p>
 						</div>
 						<div class="output-container">
@@ -52,8 +51,8 @@
 						</div>
 					</div>
 
-					<div class="card">
-						<div class="card-inner">
+					<div class="OrderDetailsCard">
+						<div class="OrderDetailsCard-inner">
 							<p class="card-name">Contact No :</p>
 						</div>
 						<div class="output-container">
@@ -63,8 +62,8 @@
 						</div>
 					</div>
 
-					<div class="card">
-						<div class="card-inner">
+					<div class="OrderDetailsCard">
+						<div class="OrderDetailsCard-inner">
 							<p class="card-name">Address :</p>
 						</div>
 						<div class="output-container">
@@ -77,10 +76,10 @@
 				</div>
 			</div>
 
-			<div class="cardraw-2">
+			<div class="OrderDetailsCardRaw-2">
 
-				<div class="card">
-					<div class="card-inner">
+				<div class="OrderDetailsCard">
+					<div class="OrderDetailsCard-inner">
 						<p class="card-name">Reference No :</p>
 					</div>
 					<div class="output-container">
@@ -90,8 +89,8 @@
 					</div>
 				</div>
 
-				<div class="card">
-					<div class="card-inner">
+				<div class="OrderDetailsCard">
+					<div class="OrderDetailsCard-inner">
 						<p class="card-name">State :</p>
 					</div>
 					<div class="output-container">
@@ -101,8 +100,8 @@
 					</div>
 				</div>
 
-				<div class="card">
-					<div class="card-inner">
+				<div class="OrderDetailsCard">
+					<div class="OrderDetailsCard-inner">
 						<p class="card-name">Bill Date :</p>
 					</div>
 					<div class="output-container">
@@ -114,10 +113,10 @@
 
 			</div>
 
-			<div class="cardraw-3">
+			<div class="OrderDetailsCardRaw-3">
 
-				<div class="card">
-					<div class="card-inner">
+				<div class="OrderDetailsCard">
+					<div class="OrderDetailsCard-inner">
 						<p class="card-name">Due Date :</p>
 					</div>
 					<div class="output-container">
@@ -127,8 +126,8 @@
 					</div>
 				</div>
 
-				<div class="card">
-					<div class="card-inner">
+				<div class="OrderDetailsCard">
+					<div class="OrderDetailsCard-inner">
 						<p class="card-name">Final Amount :</p>
 					</div>
 					<div class="output-container">
@@ -138,8 +137,8 @@
 					</div>
 				</div>
 
-				<div class="card">
-					<div class="card-inner">
+				<div class="OrderDetailsCard">
+					<div class="OrderDetailsCard-inner">
 						<p class="card-name">Paid Amount :</p>
 					</div>
 					<div class="output-container">

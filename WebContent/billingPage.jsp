@@ -13,18 +13,26 @@
 		<!--main content-->
 		<main class="main">
 			<div id="main-content">
-				<div class=b1>
-					<a href="ItemListDisplayServlet">
-						<button>Create New Bill</button>
-					</a>
-				</div>
+				<div class="image-container">
+			        <div class="image-box">
+			            <img class="photo" src="img.jpg" alt="Your Photo">
+			        </div>
+			        <div class="main-billbtn-container">
+			            <div class="sub-billbtn-container">
+			                <div class="billbtn1">
+			                    <a href="ItemListDisplayServlet">
+			                        <button class="newbill">Create New Bill</button>
+			                    </a>
+			                </div>
+			                <div class="billbtn2">
+			                    <a href="SearchBill.jsp">
+			                        <button class="exbill">Close Existing Bill</button>
+			                    </a>
+			                </div>
+			            </div>
+			        </div>
+			    </div>
 			</div>
-			<div class=b1>
-				<a href="SearchBill.jsp">
-					<button>Close Existing Bill</button>
-				</a>
-			</div>
-
 		</main>
 	</div>
 </body>

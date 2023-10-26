@@ -30,25 +30,26 @@
 		<jsp:include page="header.jsp" />
 		<jsp:include page="aside.jsp" />
 		<!--main content-->
-		<main class="main-container">
-			<form action="billfinalize" method="post" onsubmit="return validateRefNo();">
-				<table>
-					<tr>
-						<td>
-							<div class="td-container">
-								<h1>Enter Order Reference No</h1>
-							</div>
-							<div class="td-container">
-								<input type="text" name="refno" id="refno" required>
-							</div>
-						</td>
-					</tr>
-				</table>
-				<div class="search-button">
-					<button class="button-element">Search Order</button>
-				</div>
-			</form>
-
+		<main class="main">
+			<div class="track-order-container">
+				<form action="billfinalize" method="post" onsubmit="return validateRefNo();">
+					<table>
+						<tr>
+							<td>
+								<div class="td-container">
+									<h1>Enter Order Reference No</h1>
+								</div>
+								<div class="td-container">
+									<input type="text" name="refno" id="refno" required>
+								</div>
+							</td>
+						</tr>
+					</table>
+					<div class="track-order-button">
+						<button class="track-button">Search Order</button>
+					</div>
+				</form>
+			</div>
 		</main>
 	</div>
 </body>
