@@ -13,11 +13,10 @@ A laundry management system called LaundryPro.
 ## To-Do
 
 #### Management side
-- [ ] Login
-- [ ] Creating New Orders
-- [ ] Manage Order
-- [ ] Manage Prices
-- [ ] Manage User Accounts
-- [ ] View User self details
+- [x] Login
+- [x] Creating New Orders
+- [x] Manage Order
+- [x] Manage Prices
+- [x] Manage User Accounts
 #### User side
-- [ ] Track order
+- [x] Track order
