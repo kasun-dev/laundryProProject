@@ -1,21 +1,19 @@
 package com.laundrypro.price;
 
-public class DryCleanPrice {
+public class DryCleanPrice extends Price {
 
-	private int id;
 	private String itemname;
 	private double price;
 
-	//constructors
+	// constructors
 	public DryCleanPrice(int id, String iname, double price) {
-		this.id = id;
+		super(id);
 		this.itemname = iname;
 		this.price = price;
 	}
 
-	
-	//getters and setters
-	
+	// getters and setters
+
 	public int getId() {
 		return id;
 	}

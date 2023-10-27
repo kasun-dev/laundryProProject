@@ -8,7 +8,6 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 /**
  * Servlet implementation class BillDiscardServlet
@@ -22,7 +21,6 @@ public class BillDiscardServlet extends HttpServlet {
 
 		// clear the array
 		boolean clearArray = BillProgram.emptyArray();
-		
 
 		if (clearArray == true) {
 			response.sendRedirect("billingPage.jsp");

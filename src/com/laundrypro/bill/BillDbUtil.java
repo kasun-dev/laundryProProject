@@ -6,14 +6,12 @@ import java.sql.Statement;
 import java.util.ArrayList;
 
 import com.laundrypro.common.DBconnect;
-import com.laundrypro.price.BulkPrice;
-import com.laundrypro.price.DryCleanPrice;
 
 public class BillDbUtil {
 
 	private static Connection con = null;
 	private static Statement stmt = null;
-	private static ResultSet rs = null;
+
 
 	// insert UUID to generate refNo from DB method
 	public static boolean insertUUID(String UUID) {

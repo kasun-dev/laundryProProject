@@ -4,15 +4,18 @@ package com.laundrypro.price;
 import com.laundrypro.common.DBconnect;
 import java.sql.*;
 import java.util.ArrayList;
+import java.util.List;
 
-public class PriceUtil {
+public class PriceUtil implements IPriceUtil {
 
-	private static Connection con = null;
-	private static Statement stmt = null;
-	private static ResultSet rs = null;
+	private Connection con = null;
+	private Statement stmt = null;
 
-	// insert dry cleaning prices method
-	public static boolean insertDryCleanPrice(String iname, double price) {
+	/**
+	 * insert dry cleaning prices method
+	 */
+	@Override
+	public boolean insertDryCleanPrice(String iname, double price) {
 
 		boolean isSuccess = false;
 
@@ -37,8 +40,11 @@ public class PriceUtil {
 		return isSuccess;
 	}
 
-	// insert bulk laundry prices method
-	public static boolean insertBulkPrice(double weight, double price) {
+	/**
+	 * insert bulk laundry prices method
+	 */
+	@Override
+	public boolean insertBulkPrice(double weight, double price) {
 		boolean isSuccess = false;
 
 		try {
@@ -63,9 +69,11 @@ public class PriceUtil {
 
 	}
 
-	// retrieve Bulk Laundry Prices
-
-	public static ArrayList<BulkPrice> getBulkPriceList() {
+	/**
+	 * retrieve Bulk Laundry Prices
+	 */
+	@Override
+	public List<BulkPrice> getBulkPriceList() {
 
 		ArrayList<BulkPrice> array = new ArrayList<>();
 
@@ -92,9 +100,11 @@ public class PriceUtil {
 		return array;
 	}
 
-	// retrieve Dry Clean Prices
-
-	public static ArrayList<DryCleanPrice> getDryCleanPriceList() {
+	/**
+	 * retrieve Dry Clean Prices
+	 */
+	@Override
+	public List<DryCleanPrice> getDryCleanPriceList() {
 
 		ArrayList<DryCleanPrice> array = new ArrayList<>();
 
@@ -121,8 +131,11 @@ public class PriceUtil {
 		return array;
 	}
 
-	// update Bulk Prices
-	public static boolean UpdateBulkPrice(int id, double weight, double price) {
+	/**
+	 * update Bulk Prices
+	 */
+	@Override
+	public boolean updateBulkPrice(int id, double weight, double price) {
 
 		boolean isSuccess = false;
 
@@ -147,9 +160,11 @@ public class PriceUtil {
 		return isSuccess;
 	}
 
-	// update Dry Clean Prices
-	public static boolean UpdateDryCleanPrice(int id, String iname,
-			double price) {
+	/**
+	 * update Dry Clean Prices
+	 */
+	@Override
+	public boolean updateDryCleanPrice(int id, String iname, double price) {
 
 		boolean isSuccess = false;
 
@@ -175,7 +190,11 @@ public class PriceUtil {
 		return isSuccess;
 	}
 
-	public static boolean DeleteBulkPrice(int id) {
+	/**
+	 * delete bulk prices method
+	 */
+	@Override
+	public boolean deleteBulkPrice(int id) {
 
 		boolean isSuccess = false;
 
@@ -201,7 +220,11 @@ public class PriceUtil {
 
 	}
 
-	public static boolean DeleteDryCleanPrice(int id) {
+	/**
+	 * delete dry clean prices method
+	 */
+	@Override
+	public boolean deleteDryCleanPrice(int id) {
 
 		boolean isSuccess = false;
 
@@ -227,16 +250,4 @@ public class PriceUtil {
 
 	}
 
-	// //TESTING
-	// public static void main(String[]args) {
-	// try {
-	// PriceUtil.UpdateDryCleanPrice(1, "trouser", 1350);
-	// }
-	// catch(Exception e)
-	// {
-	// System.out.println("error" + e);
-	//
-	// }
-
-	// }
 }

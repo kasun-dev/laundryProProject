@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ page import="com.laundrypro.price.*"%>
-<%@ page import="java.util.ArrayList"%>
+<%@ page import="java.util.List"%>
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
@@ -36,8 +36,9 @@
 						<select id="prices" name="unitPrice" required>
 							<optgroup label="Bulk Prices"></optgroup>
 							<%
-							ArrayList<BulkPrice> price1 = PriceUtil.getBulkPriceList();
-							ArrayList<DryCleanPrice> price2 = PriceUtil.getDryCleanPriceList();
+							IPriceUtil priceUtil = new PriceUtil();
+							List<BulkPrice> price1 = priceUtil.getBulkPriceList();
+							List<DryCleanPrice> price2 = priceUtil.getDryCleanPriceList();
 
 							for (BulkPrice entry : price1) {
 							%>

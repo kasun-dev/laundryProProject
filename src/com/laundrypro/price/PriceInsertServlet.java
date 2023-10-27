@@ -2,7 +2,6 @@ package com.laundrypro.price;
 
 import java.io.IOException;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -20,35 +19,35 @@ public class PriceInsertServlet extends HttpServlet {
 			HttpServletResponse response) throws ServletException, IOException {
 
 		String service = request.getParameter("service");
-		
+
+		// priceUtil Object to access methods
+		IPriceUtil priceUtil = new PriceUtil();
 
 		boolean doInsert = false;
 
 		if (service.equals("dry_clean")) {
-			
+
 			String iname = request.getParameter("iname");
 			double iprice = Double.parseDouble(request.getParameter("iprice1"));
-			
 
-			//call method to insert into db
-			doInsert = PriceUtil.insertDryCleanPrice(iname, iprice);
-			
+			// call method to insert into db
+			doInsert = priceUtil.insertDryCleanPrice(iname, iprice);
+
 		} else if (service.equals("bulk")) {
-			
+
 			double weight = Double.parseDouble(request.getParameter("weight"));
 			double iprice = Double.parseDouble(request.getParameter("iprice2"));
-			
-			//call method to insert into db
-			doInsert = PriceUtil.insertBulkPrice(weight, iprice);
+
+			// call method to insert into db
+			doInsert = priceUtil.insertBulkPrice(weight, iprice);
 
 		}
 
 		if (doInsert == true) {
-			response.sendRedirect(request.getContextPath()+"/retrievePrice");
-			
-		} else
-		{
-			response.sendRedirect(request.getContextPath() +"/retrievePrice");
+			response.sendRedirect(request.getContextPath() + "/retrievePrice");
+
+		} else {
+			response.sendRedirect(request.getContextPath() + "/retrievePrice");
 		}
 
 	}

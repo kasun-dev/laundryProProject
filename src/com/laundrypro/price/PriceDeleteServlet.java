@@ -18,19 +18,20 @@ public class PriceDeleteServlet extends HttpServlet {
 			HttpServletResponse response) throws ServletException, IOException {
 
 		boolean doDelete = false;
+		// priceUtil Object to access methods
+		IPriceUtil priceUtil = new PriceUtil();
 		String type = request.getParameter("type");
 
-		//check type of price to delete
+		// check type of price to delete
 		if (type.equals("bulk")) {
 			int id = Integer.parseInt(request.getParameter("bid"));
-			
-			
-			doDelete = PriceUtil.DeleteBulkPrice(id); //method call
+
+			doDelete = priceUtil.deleteBulkPrice(id); // method call
 
 		} else if (type.equals("dry_clean")) {
 			int id = Integer.parseInt(request.getParameter("dcid"));
-			
-			doDelete = PriceUtil.DeleteDryCleanPrice(id); //method call
+
+			doDelete = priceUtil.deleteDryCleanPrice(id); // method call
 		}
 
 		// redirection
