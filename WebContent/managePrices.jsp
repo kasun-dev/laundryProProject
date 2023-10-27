@@ -21,7 +21,7 @@
 				<div class="add-price">
 					<div class="price-header">Add New Price</div>
 					<!-- form add new price -->
-					<form class="price-form" method="post" action="insertPrice">
+					<form name="price-form" class="price-form" method="post" action="insertPrice" onsubmit="return validatePriceForm()">
 						<label>Service type</label>
 						<select name="service" id="service" onchange="changeFormContentPrices()">
 							<option value="dry_clean">Dry Clean</option>
@@ -140,5 +140,26 @@
 
 		</main>
 	</div>
+	
+	<script>
+	function validatePriceForm(){
+		 let price1 = document.forms["price-form"]["iprice1"].value;
+		 let price2 = document.forms["price-form"]["iprice2"].value;
+		 let weight = document.forms["price-form"]["weight"].value;
+		 
+		 if (isNaN(price1)) {
+         	alert("Please enter a valid price");
+             return false;
+         }
+		 if (isNaN(price2)) {
+	         	alert("Please enter a valid price");
+	             return false;
+	         }
+		 if (isNaN(weight)) {
+	         	alert("Please enter a valid price");
+	             return false;
+	         }
+	}
+	</script>
 </body>
 </html>

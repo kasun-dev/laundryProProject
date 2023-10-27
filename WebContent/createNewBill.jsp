@@ -195,6 +195,10 @@
                 alert("Payment must be greater than minimum payment");
                 return false;
             }
+            if (isNaN(pamount)) {
+            	alert("Please enter a valid payment");
+                return false;
+            }
         }
     </script>
 </body>
