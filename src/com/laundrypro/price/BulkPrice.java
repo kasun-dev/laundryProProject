@@ -1,14 +1,15 @@
 package com.laundrypro.price;
 
-public class BulkPrice {
+public class BulkPrice extends Price {
 
-	private int id;
+	
 	private double weight;
 	private double price;
 	
 	//constructor
 	public BulkPrice(int id,double weight, double price) {
-		this.id = id;
+		
+		super(id);
 		this.weight = weight;
 		this.price = price;
 	}
