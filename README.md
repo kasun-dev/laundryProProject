@@ -23,4 +23,6 @@ This project was designed for project submission of OOP module at the university
 #### User side
 - [x] Track order
 
+## Integration state:
+Fully Integrated.
 
