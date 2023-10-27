@@ -6,18 +6,20 @@
 - Ravindu Ishan
 - Kasun Sampath
 
-## About Project
+## Summary
+LaundryPro is a simple laundry management system. Its primary use is to manage the day to day activites and functions of a laundry outlet or service.
 
-A laundry management system called LaundryPro.
-
-## To-Do
-
+##Features and Functions
 #### Management side
-- [ ] Login
+- [x] Admin Dashboard
+- [x] Login and accounts
 - [x] Creating New Orders
-- [x] Manage Order
-- [x] Manage Prices
-- [ ] Manage User Accounts
-- [ ] View User self details
+- [x] Closing Bills
+- [x] Managing Orders
+- [x] Managing Laundry Prices
+- [x] Managing User Accounts
+- [x] View User self details
 #### User side
-- [ ] Track order
+- [x] Track order
+
+
