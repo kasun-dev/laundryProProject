@@ -1,7 +1,7 @@
 package com.laundrypro.price;
 
 import java.io.IOException;
-import java.util.ArrayList;
+import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -20,22 +20,21 @@ public class PriceRetrieveServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
 
-		//response.getWriter().append("Served at:")
-				//.append(request.getContextPath());
+		// priceUtil Object to access methods
+		IPriceUtil priceUtil = new PriceUtil();
 
-		
-		ArrayList<BulkPrice> array1 = PriceUtil.getBulkPriceList(); //get bulk prices
-		ArrayList<DryCleanPrice> array2 = PriceUtil.getDryCleanPriceList(); //get dry clean prices
+		// get bulk prices;
+		List<BulkPrice> array1 = priceUtil.getBulkPriceList();
+		// get dry clean pricess
+		List<DryCleanPrice> array2 = priceUtil.getDryCleanPriceList();
 
 		request.setAttribute("bprices", array1);
 		request.setAttribute("dcprices", array2);
 
-		RequestDispatcher dispatcher = request.getRequestDispatcher("managePrices.jsp");
-		
+		RequestDispatcher dispatcher = request
+				.getRequestDispatcher("managePrices.jsp");
+
 		dispatcher.forward(request, response);
-		
-		
+
 	}
-
-
 }

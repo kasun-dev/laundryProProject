@@ -15,7 +15,7 @@
 			<div id="main-content">
 				<div class="image-container">
 			        <div class="image-box">
-			            <img class="photo" src="img.jpg" alt="Your Photo">
+			            <img class="photo" src="images/img.jpg" alt="Your Photo">
 			        </div>
 			        <div class="main-billbtn-container">
 			            <div class="sub-billbtn-container">
