@@ -1,13 +1,14 @@
 # Laundry Pro - Laundry Management System
 
-## Developers
-
-- Takeshi Dilshan
-- Ravindu Ishan
-- Kasun Sampath
-
 ## Summary
 LaundryPro is a simple laundry management system. Its primary use is to manage the day to day activites and functions of a laundry outlet or service.
+This project was designed for project submission of OOP module at the university of SLIIT.
+
+## Developers
+
+- Takeshi Dilshan - 
+- Ravindu Ishan - it22358752
+- Kasun Sampath - 
 
 ## Features and Functions
 #### Management side
