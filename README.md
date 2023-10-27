@@ -9,7 +9,7 @@
 ## Summary
 LaundryPro is a simple laundry management system. Its primary use is to manage the day to day activites and functions of a laundry outlet or service.
 
-##Features and Functions
+## Features and Functions
 #### Management side
 - [x] Admin Dashboard
 - [x] Login and accounts
