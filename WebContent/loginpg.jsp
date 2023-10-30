@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Login Page</title>
+<title>Login Page_laundyPro</title>
 
 <link rel="stylesheet" href="css/styles.css">
 
@@ -31,26 +31,41 @@
 			</a>
 		</div>
 	</header>
-
-	<div class="page">
+	
+	
 		<h1 style="text-align: center;">LAUNDRY PRO</h1>
 		<h3 style="text-align: center;">Login Page</h3>
-		<center>
-			<div>
-				<form action="loginctrl" method="post">
-					<label for="username">Username:</label>
-					<input type="text" id="username" name="username" required>
-					<br />
-					<br />
-					<label for="password">Password:</label>
-					<input type="password" id="password" name="password" required>
-					<br />
-					<br/>
-					<input type="submit" value="Login">
-				</form>
-			</div>
-		</center>
+		<main class="main">
+		<div id="main-content">
+				<table style="width:20%">
+					<form action="loginctrl" method="post">
+					<tr>
+						<td>
+							<label for="username">Username:</label>
+						</td>
+						<td>
+							<input type="text" id="username" name="username" required>
+						</td>
+					</tr>
+					<tr></tr>
+					<tr>
+						<td>
+							<label for="password">Password:</label>
+						</td>
+						<td>
+							<input type="password" id="password" name="password" required>
+						</td>
+					</tr>
+				
+					<tr>
+						<td colspan ="2">
+							<input type="submit" value="Login">
+						</td>
+					</tr>
+					</form>
+				</table>
+		
 	</div>
-
+	</main>
 </body>
 </html>

@@ -3,7 +3,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>delete user account</title>
 
 <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -19,16 +19,33 @@
 				String name = request.getParameter("name");
 				String uname = request.getParameter("uname");
 				%>
-				<div>
-					<form action="deleteAccCtrl" method="post">
-						<label for="name">Name:</label>
-						<input type="text" id="name" name="name" value="<%=name%>" readonly>
-						<label for="username">Username:</label>
-						<input type="text" id="username" name="uname" value="<%=uname%>" readonly>
-
-						<input type="submit" value="Delete">
-					</form>
-				</div>
+					<table style="width:20%">
+						<form action="deleteAccCtrl" method="post">
+						<tr>
+							<td>
+								<label for="name">Name:</label>
+							</td>
+							<td>
+								<input type="text" id="name" name="name" value="<%=name%>" readonly>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<label for="username">Username:</label>
+							</td>
+							<td>
+								<input type="text" id="username" name="uname" value="<%=uname%>" readonly>
+							</td>
+						</tr>
+					
+						<tr>
+							<td colspan ="2">
+								<input type="submit" value="Delete">
+							</td>
+						</tr>
+						</form>
+					</table>	
+				
 			</div>
 		</main>
 	</div>
