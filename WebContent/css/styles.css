@@ -428,7 +428,425 @@ label {
 	padding-right: 20px;
 }
 
+/* UpdateOrder.jsp */
 
+.main-container-update .form-container{
+    margin: 50px;
+    padding: 50px;
+}
+
+.update-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0px;
+}
+
+.update-button .button-element{
+    background-color: rgb(45, 150, 255);
+	border: none;
+	color: white;
+	padding: 5px 17px;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+.main-container-update .form-container input[type="text"] {
+    padding-left: 15px;
+    width: 129px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+.main-container-update .form-container input[type="date"] {
+    padding-left: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+.main-container-update .form-container select {
+    padding-left: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    height: 22px;
+    width: 147px;
+  }
+  
+ /* DeleteOrder.jsp */
+
+.main-container-delete .form-container{
+    margin: 0px;
+    padding: 0px;
+}
+
+.main-container-delete h1 {
+	text-align: center;
+	margin: 0px;
+    padding: 18px 0;
+}
+
+
+.mo-delete-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0px;
+}
+
+.mo-delete-button .button-element{
+    background-color: rgb(255, 55, 55);
+	border: none;
+	color: white;
+	padding: 5px 17px;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+.main-container-delete .form-container input[type="text"] {
+    padding-left: 15px;
+    width: 129px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+.main-container-delete .form-container input[type="date"] {
+    padding-left: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+.main-container-delete .form-container select {
+    padding-left: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    height: 22px;
+    width: 147px;
+  }
+  
+  /* createNewBill.cusDetails.jsp */
+
+.main-container-add-cus .form-container{
+    margin: 0px;
+    padding: 0px;
+}
+
+.main-container-add-cus .form-container h1{
+    text-align: center;
+    font-size: 18px;
+	margin: 0px;
+    padding: 10px 0;
+}
+
+.add-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0px;
+}
+
+.add-button .button-element{
+    background-color: rgb(45, 150, 255);
+	border: none;
+	color: white;
+	padding: 5px 17px;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+.main-container-add-cus .form-container input[type="text"] {
+    padding-left: 15px;
+    width: 129px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  
+.main-container-add-cus #fullname {
+	width: 170px;
+}
+
+.main-container-add-cus  #address {
+    width: 250px;
+}
+
+/* ExistingCustomer.jsp */
+
+.main-container-ex-cus .form-container{
+    margin: 0px;
+    padding: 0px;
+}
+
+.main-container-ex-cus .form-container h1{
+    text-align: center;
+    font-size: 18px;
+	margin: 0px;
+    padding: 10px 0;
+}
+
+.main-container-ex-cus .button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-container-ex-cus .yes-button, .main-container-ex-cus .no-button {
+	padding: 10px 10px;
+}
+
+.yes-button .button-element, .no-button .button-element{
+	border: none;
+	color: white;
+	padding: 5px 17px;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+.yes-button .button-element{
+    background-color: rgb(45, 150, 255);
+}
+
+.no-button .button-element{
+    background-color: rgb(255, 55, 55);
+}
+
+.main-container-ex-cus .form-container input[type="text"] {
+    padding-left: 15px;
+    width: 129px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  
+.main-container-ex-cus #fullname {
+	width: 170px;
+}
+
+.main-container-ex-cus  #address {
+    width: 250px;
+}
+
+/* createNewBill.fullbill.jsp */
+
+.main-container-full-bill .form-container{
+    margin: 0px;
+    padding: 0px;
+}
+
+.main-container-ex-cus .card-container h1{
+    text-align: center;
+    font-size: 18px;
+	margin: 0px;
+    padding: 10px 0;
+}
+
+.main-container-ex-cus .button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-container-ex-cus .yes-button, .main-container-ex-cus .no-button {
+	padding: 10px 10px;
+}
+
+.yes-button .button-element, .no-button .button-element{
+	border: none;
+	color: white;
+	padding: 5px 17px;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+.yes-button .button-element{
+    background-color: rgb(45, 150, 255);
+}
+
+.no-button .button-element{
+    background-color: rgb(255, 55, 55);
+}
+
+.main-container-ex-cus .form-container input[type="text"] {
+    padding-left: 15px;
+    width: 129px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  
+.main-container-ex-cus #fullname {
+	width: 170px;
+}
+
+.main-container-ex-cus  #address {
+    width: 250px;
+}
+
+/*createNewBill.fullbill.jsp*/
+
+  .main-container-full-bill {
+    grid-area: main;
+    overflow-y: auto;
+    width: auto;
+    height: auto;
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 0 6px 7px -1px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    border: 1px solid #d2d2d3;
+  }
+ 
+  .main-container-full-bill .cardraw-1{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    margin: 20px 0;
+  }
+
+  .main-container-full-bill .cardraw-2{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 20px;
+    margin: 20px 0;
+  }
+  
+  .main-container-full-bill .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 0 20px 20px 20px;
+    box-shadow: 0 6px 7px -1px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    border: 1px solid #d2d2d3;
+  }
+  
+  .main-container-full-bill .card:first-child {
+    background-color: rgb(49, 49, 153);
+  }
+  
+  .main-container-full-bill .card:nth-child(2) {
+    background-color: rgb(49, 49, 153);
+  }
+  
+  .main-container-full-bill .card:nth-child(3) {
+    background-color: rgb(49, 49, 153);
+  }
+  .main-container-full-bill .card:nth-child(4) {
+    background-color: rgb(49, 49, 153);
+  }
+  .main-container-full-bill .card:nth-child(5) {
+    background-color: rgb(49, 49, 153);
+  }
+  .main-container-full-bill .card:nth-child(6) {
+    background-color: rgb(49, 49, 153);
+  }
+  
+  .main-container-full-bill .card > span {
+    font-size: 20px;
+    font-weight: 600;
+  }
+  
+  .main-container-full-bill .card-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .main-container-full-bill .output-container {
+    color: white;
+  }
+  
+  .main-container-full-bill .card-inner > p {
+    font-size: 18px;
+    font-weight: 550;
+    font-family: sans-serif;
+    color: white;
+  }
+  
+  .main-container-full-bill .card-inner > span {
+    font-size: 35px;
+  }
+    
+  .main-container-full-bill .finish-button,
+  .main-container-full-bill .close-button {
+    padding-top: 30px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .main-container-full-bill .finish-button .button-element,
+  .main-container-full-bill .close-button .button-element {
+    color: #fff;
+    border: 0;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: sans-serif;
+    font-size: 15px;
+    font-weight: 750;
+    padding: 8px 10px;
+    transform: translateZ(0) scale(1);
+    transition: transform 0.2s;
+    width: 225px;
+    height: 40px;
+  }
+  
+  .main-container-full-bill .close-button .button-element {
+    background-color: rgb(255, 55, 55);	  
+  }
+  
+  .main-container-full-bill .finish-button .button-element {
+    background-color: #30c738c0;	  
+  }
+  
+  .main-container-full-bill .finish-button .button-element:not(:disabled):hover,
+  .main-container-full-bill .close-button .button-element:not(:disabled):hover {
+    transform: scale(1.02);
+  }
+  
+  .main-container-full-bill .finish-button .button-element:not(:disabled):active,
+  .main-container-full-bill .close-button .button-element:not(:disabled):active {
+    transform: translateY(0.125rem);
+  }
+  
+  .main-container-full-bill .finish-button .output-container .card-details{
+    font-size: 16px;
+    font-family: sans-serif;
+    margin: 0px;
+  }
+
+  .main-container-full-bill .table-container ,.main-container-full-bill .output-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .main-container-full-bill input[type="text"] {
+    padding-left: 15px;
+    width: 120px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .main-container-full-bill select {
+    padding-left: 15px;
+    width: 120px;
+    height: 22px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+ 
+  
+  
 /*---Media Queries---*/
 
 /* Medium Devices*/
