@@ -31,5 +31,3 @@ This project was designed for project submission of OOP module at the university
 ## Integration state:
 
 Fully Integrated.
-
-test 123
